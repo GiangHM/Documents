@@ -1,4 +1,4 @@
-**I/ Clean code(readability/ naming convention/ documentation)**
+## I/ Clean code(readability/ naming convention/ documentation)
 
 	1/ Are magic numbers explained? There should be no number in the code without at least a comment of why this is here. If the number is repetitive, is there a constant/enum or equivalent?
 	2/ Instead of using raw strings, are constants used in the main class? Or if these strings are used across files/classes, is there a static class for the constants?
