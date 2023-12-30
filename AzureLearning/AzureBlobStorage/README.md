@@ -62,10 +62,10 @@
 - Data encryption at rest on service side
 - [Configure client side encryption](https://learn.microsoft.com/en-us/azure/storage/blobs/client-side-encryption?tabs=dotnet)
 - [Configure networking security](https://learn.microsoft.com/en-us/azure/storage/common/storage-network-security?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&bc=%2Fazure%2Fstorage%2Fblobs%2Fbreadcrumb%2Ftoc.json&tabs=azure-portal)
-## Unit test Blob Storage SDK
-- Develop with .Net
-  + [Create client object](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-client-management?tabs=dotnet)
-  + [Working with service client, container client, blob client](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-dotnet-get-started?tabs=azure-ad)
+## [Unit test Blob Storage SDK](https://learn.microsoft.com/en-us/dotnet/azure/sdk/unit-testing-mocking?tabs=csharp)
+## Develop with .Net
+- [Create client object](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-client-management?tabs=dotnet)
+- [Working with service client, container client, blob client](https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-dotnet-get-started?tabs=azure-ad)
 - Use cases
   + Upload image to blob storage using SAS
   + A common .net wrapper class for reusing
