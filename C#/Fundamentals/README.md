@@ -15,15 +15,15 @@
 - out: no need to declare before using them (from c# 7)
 - Value type and Reference type
   + assignment operator:
-		* value type: like copy value, store to a new stack
-		* reference type: redirecting what the reference variable points to in memory
-	+ [passing to a method](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/passing-value-type-parameters)
-	  + reference type:
-			* pass value: -> possible to change object's state data, cannot change object memory that reference point to
-			* pass ref --> possible to change object's state data, and possible to change object memory
-		+ value type
-		  * pass value: pass a copy of data, any change  in called method, do not affect original data
-			* pass ref: called method can change value.
+    * value type: like copy value, store to a new stack
+    * reference type: redirecting what the reference variable points to in memory
+- [passing to a method](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/passing-value-type-parameters)
+  + reference type:
+    * pass value: possible to change object's state data, cannot change object memory that reference point to
+    * pass ref: possible to change object's state data, and possible to change object memory
+  + value type
+    * pass value: pass a copy of data, any change  in called method, do not affect original data
+    * pass ref: called method can change value.
 ## Tuples:
 - (string, int, string)  values = ('a', 1, 'b')
 - use as a method return value
