@@ -71,7 +71,7 @@
   + A common .net wrapper class for reusing
     
 # Code example
-- ## [Wrapper class]([https://github.com/GiangHM/AzureBlobStorageLib](https://github.com/GiangHM/PracticalAzureSDKs/tree/main/AzureTableStorage))
+- ## [Wrapper class](https://github.com/GiangHM/PracticalAzureSDKs/tree/main/AzureTableStorage)
 - ## API using wrapper class to generate SAS for uploading file, code snippets:
   + ### Inject to service:
     ```C#
