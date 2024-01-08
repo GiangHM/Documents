@@ -121,6 +121,8 @@
         }
     }
     ```
+## Refs: 
+- Links and images come from [microsof learning page](https://learn.microsoft.com/en-us/azure/?product=popular).
 
 
       
