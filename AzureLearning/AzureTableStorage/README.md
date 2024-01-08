@@ -5,7 +5,7 @@
 - storing TBs of structured data for serving web scale applicaiton
 - storing dataset don't requeire complex joins.
 - Querying data quickly
-- Accessing data using OData protocal
+- Accessing data using OData protocol
 ## [Table storage concepts](https://learn.microsoft.com/en-us/rest/api/storageservices/Understanding-the-Table-Service-Data-Model)
 - Storage account
 - Tables
@@ -107,6 +107,6 @@
         }
     }
 
-
-
+## Refs: 
+- Links and image come from microsof learning website.
 
