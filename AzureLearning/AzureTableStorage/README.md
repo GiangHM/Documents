@@ -1,4 +1,4 @@
-# Azure blob storage summary
+# Azure table storage summary
 
 ## [What is it and uses for what?](https://learn.microsoft.com/en-us/azure/storage/tables/table-storage-overview)
 - is a service that stores non-relational structured data, (NoSQL data)
