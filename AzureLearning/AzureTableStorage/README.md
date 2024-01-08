@@ -71,7 +71,7 @@
     // Add services to the container.
     builder.Services.AddAzureTableStorage();
     builder.Services.AddTransient<ITableStorageService<WeatherForecastEntity>, TableStorageService<WeatherForecastEntity>>();
-
+    ```
   - Use in Controller
     ```C#
     namespace APIExamples.Controllers
@@ -106,7 +106,8 @@
             }
         }
     }
+    ```
 
 ## Refs: 
-- Links and image come from microsof learning website.
+- Links and images come from [microsof learning page](https://learn.microsoft.com/en-us/azure/?product=popular).
 
