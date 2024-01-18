@@ -58,6 +58,6 @@
 - Dependency Injection
   - [In process model](https://learn.microsoft.com/en-us/azure/azure-functions/functions-dotnet-dependency-injection#register-services): using FunctionsStartup 
   - [Isolated worker process](https://learn.microsoft.com/en-us/azure/azure-functions/dotnet-isolated-process-guide?tabs=windows#dependency-injection): use the .Net stardand way of call ConfigureService method
- 
+## [Deployment slot](https://learn.microsoft.com/en-us/azure/azure-functions/functions-deployment-slots?tabs=azure-portal)
 # Examples
 ## [C# Isolated worker process model](https://github.com/GiangHM/PracticalAzureSDKs/tree/main/IsolatedWorkerFunctions)
