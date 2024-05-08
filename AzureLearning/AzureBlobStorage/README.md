@@ -123,6 +123,7 @@
     ```
 ## Refs: 
 - Links and images come from [Microsof learning page](https://learn.microsoft.com/en-us/azure/?product=popular).
+- [Git samples from internet](https://github.com/Azure/azure-sdk-for-net/tree/main/sdk/tables/Azure.Data.Tables/tests/samples)
 
 
       
