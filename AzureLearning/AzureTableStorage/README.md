@@ -2,10 +2,10 @@
 
 ## [What is it and uses for what?](https://learn.microsoft.com/en-us/azure/storage/tables/table-storage-overview)
 - is a service that stores non-relational structured data, (NoSQL data)
-- storing TBs of structured data for serving web scale applicaiton
-- storing dataset don't requeire complex joins.
+- storing TBs of structured data for serving web-scale application
+- storing datasets doesn't require complex joins.
 - Querying data quickly
-- Accessing data using OData protocol
+- Accessing data using the OData protocol
 ## [Table storage concepts](https://learn.microsoft.com/en-us/rest/api/storageservices/Understanding-the-Table-Service-Data-Model)
 - Storage account
 - Tables
@@ -18,17 +18,17 @@
 ![image](https://github.com/GiangHM/Documents/assets/36400582/2b366f67-9725-40ad-a6ec-1017e57048d6)
 ## [How to choose between Azure Commos DB for Table and Azure Table storage](https://learn.microsoft.com/en-us/azure/cosmos-db/table/support?toc=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fazure%2Fstorage%2Ftables%2Ftoc.json&bc=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fazure%2Fbread%2Ftoc.json)
 - Latency: Commos DB: <10ms for reading and 15ms for writing
-- Indexing: Commos DB automactic and complete indexing on all props
-- Query: Take advantages of indexing
-- Throughput: Commos DB: > 10 million operation per second (20000 per second for table storage)
+- Indexing: Commos DB automatic and complete indexing on all props
+- Query: Take advantage of indexing
+- Throughput: Commos DB: > 10 million operations per second (20000 per second for table storage)
 - Pricing: Commos have both: Consumption and provisioned capacity modes
 ## [Authorization](https://learn.microsoft.com/en-us/azure/storage/common/authorize-data-access?toc=%2Fazure%2Fstorage%2Ftables%2Ftoc.json)
-- Microsoft entra ID
+- Microsoft Entra ID
 - Shared key
 - SAS
 ## Security and Data redundancy
 - [Security](https://learn.microsoft.com/en-us/azure/storage/common/storage-service-encryption?toc=%2Fazure%2Fstorage%2Ftables%2Ftoc.json):
-  - Azure storage encryption with service-side encrption
+  - Azure storage encryption with service-side encryption
   - Encrypt data with infrastructure encryption
   - Client-side encryption
 - [Data redundancy](https://learn.microsoft.com/en-us/azure/storage/common/storage-redundancy?toc=%2Fazure%2Fstorage%2Ftables%2Ftoc.json)
@@ -50,14 +50,23 @@
 - Partition key and Rowkey should consider carefully
 - [Design for querying](https://learn.microsoft.com/en-us/azure/storage/tables/table-storage-design-for-query)
   - Choose PartitionKey and RowKey impacts your query
-  - A *Point Query*: most efficient lookup, it uses index of PartitionKey and RowKey
-  - *Range Query*: second best, it use PartitionKey and filter on a range of RowKey
-  - *Parttion scan*: use PartitionKey and filter on another prop of entity
+  - A *Point Query*: most efficient lookup, it uses the index of PartitionKey and RowKey
+  - *Range Query*: second best, it uses PartitionKey and filters on a range of RowKey
+  - *Partition scan*: use PartitionKey and filter on another prop of entity
   - *Table scan*: don't include PartitionKey
 - [Design for data modification](https://learn.microsoft.com/en-us/azure/storage/tables/table-storage-design-for-modification)
 - [Design patterns](https://learn.microsoft.com/en-us/azure/storage/tables/table-storage-design-patterns)
 ## Examples:
 - ### [Build a wrapper class](https://github.com/GiangHM/PracticalAzureSDKs/tree/main/AzureTableStorage)
+- ### Notes for developer
+  | TableTransaction ActionType | TableClient Method | Description | 
+  | --- | --- | --- |
+  | Add | TableClient.AddEntity | Add entity. If the entity exists, an exception will be thrown |
+  | UpdateMerge | TableClient.UpdateEntity, UpdateMode = Merge | Updates if it exists. The property values present in the entity will be merged with the existing |
+  | UpdateReplace | TableClient.UpdateEntity, UpdateMode = Replace | Replace entity if it exists.|
+  | Delete | TableClient.DeleteEntity | Delete entity|
+  | UpsertMerge | TableClient.UpsertEntity, UpdateMode = Merge | Inserts if not exist else merges|
+  | UpsertReplace | TableClient.UpsertEntity, UpdateMode = Replace | Inserts if not exist else replaces|
 - ### Using wrapper class
   - Inject the service
     ```C#
