@@ -5,7 +5,7 @@
  ## How to register services
   - Register a service in the method 'ConfigureServices'
   - Use 'services.Configure' method to config/bind  our configuration to the option
-  - Also can create an extension method of IServicesCollection to compute a group of related service
+  - [Also can create an extension method of IServicesCollection to compute a group of related service](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-8.0#register-groups-of-services-with-extension-methods)
   - Note: convention : Add{OurServiceName}, for example: AddDataAcessLayer, AddBusinessServices...
  ## Service Lifetime
   - Transient: short lifetime, created when  service container request, disposed at the end of the request
