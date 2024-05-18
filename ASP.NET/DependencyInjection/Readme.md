@@ -19,8 +19,11 @@
     + Dispose of services: Container takes this responsibility
    
 # [ASP.NET Core 8](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-8.0)
- - Config service in program file
+ - Config service in the program file
  ## [Keyed Service](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-8.0#keyed-services)
+  - When using keyed services:
+    + Have an interface with multiple implementations
+    + And need to use one of those implementations in *different places in your application*   
   - Add services by using: AddKeyedSingleton (or AddKeyedScoped or AddKeyedTransient)
     ```C#
     builder.Services.AddKeyedSingleton<ICache, BigCache>("big");
@@ -34,5 +37,7 @@
         return cache.Get("data-mvc");
     }
     ```
+
+ - [Example](https://github.com/GiangHM/PracticalASPNet/tree/main/PracticalAPI/DIKeyedServices)
     
 
