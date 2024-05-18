@@ -57,7 +57,6 @@
 - [Design for data modification](https://learn.microsoft.com/en-us/azure/storage/tables/table-storage-design-for-modification)
 - [Design patterns](https://learn.microsoft.com/en-us/azure/storage/tables/table-storage-design-patterns)
 ## Examples:
-- ### [Build a wrapper class](https://github.com/GiangHM/PracticalAzureSDKs/tree/main/AzureTableStorage)
 - ### Notes for developer
   | TableTransaction ActionType | TableClient Method | Description | 
   | --- | --- | --- |
@@ -67,6 +66,7 @@
   | Delete | TableClient.DeleteEntity | Delete entity|
   | UpsertMerge | TableClient.UpsertEntity, UpdateMode = Merge | Inserts if not exist else merges|
   | UpsertReplace | TableClient.UpsertEntity, UpdateMode = Replace | Inserts if not exist else replaces|
+- ### [Build a wrapper class](https://github.com/GiangHM/PracticalAzureSDKs/tree/main/AzureTableStorage)
 - ### Using wrapper class
   - Inject the service
     ```C#
