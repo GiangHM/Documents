@@ -55,7 +55,19 @@
     * azure template
   + Pack data before moving to cooler tier
 ## Authorization
-- Microsoft entra id & RBAC -> recommendation
+- [Microsoft entra id & RBAC -> recommendation](https://learn.microsoft.com/en-us/dotnet/azure/sdk/authentication/?tabs=command-line)
+  - Code example
+    ```C#
+        using Microsoft.Extensions.Azure;
+        using Azure.Identity;
+        
+        builder.Services.AddAzureClients(clientBuilder =>
+        {
+            clientBuilder.AddBlobServiceClient(
+                new Uri("https://<account-name>.blob.core.windows.net"));
+            clientBuilder.UseCredential(new DefaultAzureCredential());
+        });
+      ```
 - Share access key -> be careful, can use with Azure Key Vault for security reason
 - [Share access signature](https://learn.microsoft.com/en-us/azure/storage/common/storage-sas-overview?toc=%2Fazure%2Fstorage%2Fblobs%2Ftoc.json&bc=%2Fazure%2Fstorage%2Fblobs%2Fbreadcrumb%2Ftoc.json)
 ## Security
