@@ -1,9 +1,9 @@
-# [ASP .Net Core 3](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-5.0)
+# [Common](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-9.0)
 - First, DI is to archive Inversion of Control, a solid principle.
 - We have 3 types of DI: constructor injection, method injection, property injection
 - The built-in DI of the .net core is based on constructor injection.
  ## How to register services
-  - Register a service in the method 'ConfigureServices'
+  - Register a service in the method 'ConfigureServices' for Asp.Net core 2,3. From version 6, we config service in the program file because of the minimal hosting model
   - Use 'services.Configure' method to config/bind  our configuration to the option
   - [Also can create an extension method of IServicesCollection to compute a group of related service](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-8.0#register-groups-of-services-with-extension-methods)
   - Note: convention : Add{OurServiceName}, for example: AddDataAcessLayer, AddBusinessServices...
@@ -18,8 +18,7 @@
     + Make services small, well-factored, and easily tested.
     + Dispose of services: Container takes this responsibility
    
-# [ASP.NET Core 8](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-8.0)
- - Config service in the program file
+# [From ASP.NET Core 8](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-8.0)
  ## [Keyed Service](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-8.0#keyed-services)
   - When using keyed services:
     + Have an interface with multiple implementations
