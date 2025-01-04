@@ -124,3 +124,5 @@ app.UseExceptionHandler();
 ```
 
 In conclusion, ASP.NET Core 8 marks a pivotal advancement in error handling, introducing the IExceptionHandler interface to replace middleware-based approaches with a more cohesive and flexible error management system. This new paradigm not only simplifies the developer's task in crafting custom exception handling strategies but also enhances the application's ability to respond dynamically to a wide range of errors.
+
+### [A complete example in Github](https://github.com/GiangHM/PracticalASPNet/tree/main/PracticalAPI/ExceptionHandlers)
