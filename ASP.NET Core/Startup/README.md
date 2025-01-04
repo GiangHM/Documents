@@ -19,8 +19,8 @@
   + Suffix name matched with the current environment is prioritized,
   For example (StartupDevelopment)
 
-# [ASP.Net Core 8](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/startup?view=aspnetcore-8.0)
-  + Startup code in the program file
+# [ASP.Net Core 6, 8](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/startup?view=aspnetcore-8.0)
+  + Startup code in the program file because of the minimal hosting model.
 
 ```C#
     var builder = WebApplication.CreateBuilder(args);
