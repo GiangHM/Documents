@@ -140,5 +140,5 @@ app.Run(async (context) =>
 
 app.Run();
 ```
-
+## [An example of CustomExceptionHandlerMiddleware.cs](https://github.com/GiangHM/PracticalASPNet/blob/main/PracticalAPI/CustomMiddleware/CustomExceptionHandlerMiddleware.cs)
 
