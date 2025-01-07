@@ -43,3 +43,5 @@
     ...
     app.Run();
   ```
+
+### [A complete example of program file in my Github repo](https://github.com/GiangHM/PracticalASPNet/blob/main/PracticalAPI/Program.cs)
