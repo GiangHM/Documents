@@ -37,6 +37,6 @@
     }
     ```
 
- - [Example](https://github.com/GiangHM/PracticalASPNet/tree/main/PracticalAPI/DIKeyedServices)
+  ### [Keyed Service Example in Github repo](https://github.com/GiangHM/PracticalASPNet/tree/main/PracticalAPI/DIKeyedServices)
     
 
