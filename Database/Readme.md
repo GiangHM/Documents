@@ -31,51 +31,35 @@
 
 ## Common design patterns
 - Different kind of association between objects
- ++ many-to-many: ex: 1 student can take (n) course, and 1 course can have (n) students.
-  +++ to build: add a association table
- ++ multiple many-to-many: want to know course that student register belongs to which semester, and also know more semester information
-  +++ to build: add more columns in association table, that refer to new table "semester"
- ++ multiple object associations: 
-   - Ex: 
-		  
-
-  +++ To build: divide complex relationship to many simpler relationship.
-
- ++ Repeated attribute associations: Ex: person may have many phone, email address
-  +++ To build: build new table to contain the repeated data. use original table's PK to link new record back to original table
-		- 
-		- also you can use unique key... to perform some business rules like: unique purpose for one phone number...
-
-	- Reflexive associations
-		- One-to-One reflexive: ex: person is married to person
-			- To build: create new table Marriage
-		- One-to-many reflexive: ex: 1 employee can manage (n) employee
-			- add more column 
-			  
-
-	- Hierarchical data
-			- a instance One-to-Many reflexive association
-			- Think about this pattern: example:Tom Referential: geographical data -> performance effect when do query
-
-	- Network data: remember Tom context: 
-		- We need table to store node information
-		- Another table to store Link between node: FromNode, ToNode, LinkType
-
-	- Temporal data: apply for online store/ banking (rate of credit/ rate deposit/ rate)
-		- use Effective/Valid Date
-
-		- delete object: consider using effective date, Or using another column to stock original data
-		- also consider which data should Temporalize
-
-	- Logging and locking
-		- Logging: 
-			- audit columns: createdby, modifiedby, createddate, modifieddate -> apply to Tom
-			- audit table: create separate table to log changes of data -> apply to TOM with order history functionality 
-		- Locking: when user modify data of a record, the record should be lock to make data consistency .
-			- apply TOM:  with lock user edit order by block (General/ Routing....)
-			- add more column: LockedBy; 
-			- If we have process flow like: create order -> approve order -> ... 
-				- we can use AssignedTo -> to notify, transfer order to right user to process it on next step
+  + Many-to-many: ex: 1 student can take (n) course, and 1 course can have (n) students.
+    * To build: add a association table
+  + Multiple many-to-many: want to know course that student register belongs to which semester, and also know more semester information
+    * To build: add more columns in association table, that refer to new table "semester"
+  + Multiple object associations: 
+    * To build: divide complex relationship to many simpler relationship.
+  + Repeated attribute associations: Ex: person may have many phone, email address
+    * To build: build new table to contain the repeated data. use original table's PK to link new record back to original table. Also you can use unique key... to perform some business rules like: unique purpose for one phone number...
+  + Reflexive associations
+    * One-to-One reflexive: ex: person is married to person
+    * To build: create new table Marriage
+    * One-to-many reflexive: ex: 1 employee can manage (n) employee
+- Add more column
+- Hierarchical data
+  + A instance One-to-Many reflexive association
+  + Think about this pattern:
+- Network data:
+  + We need table to store node information
+  + Another table to store Link between node: FromNode, ToNode, LinkType
+- Temporal data: apply for online store/ banking (rate of credit/ rate deposit/ rate)
+- Use Effective/Valid Date
+- Delete object: consider using effective date, Or using another column to stock original data. Also consider which data should Temporalize
+- Logging and locking
+  + Logging: 
+    * Audit columns: createdby, modifiedby, createddate, modifieddate -> apply to Tom
+    * Audit table: create separate table to log changes of data -> apply to TOM with order history functionality 
+  + Locking: when user modify data of a record, the record should be lock to make data consistency .
+    * Add more column: LockedBy; 
+    * If we have process flow like: create order -> approve order -> We can use AssignedTo -> to notify, transfer order to right user to process it on next step
 
 # Design table to support application
 - Convert domain into table: It mean convert value range (like master data) into table
