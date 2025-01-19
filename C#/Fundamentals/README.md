@@ -71,6 +71,9 @@ https://medium.com/@ben.k.muller/c-ienumerable-vs-list-and-array-9f099f157f4f
    Console.WriteLine("case 2: {0}", name);
  }
 ```
+Output
+![image](https://github.com/user-attachments/assets/37d9208f-ef3d-45df-bbda-91fc1795f2ea)
+
 
 ## Difference between IEnumerable and IQueryable
 - IEnumerable ->  query data from in-memory collections like List, Array, etc
