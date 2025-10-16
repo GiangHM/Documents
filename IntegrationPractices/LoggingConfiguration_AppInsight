@@ -1,0 +1,17 @@
+"Logging": {
+    "LogLevel": {
+        "Default": "Information",
+        "Microsoft": "Warning",
+        "Microsoft.Hosting.Lifetime": "Information"
+    },
+    "ApplicationInsights": {
+        "LogLevel": {
+            "Default": "Information",
+            "Microsoft": "Warning",
+            "Microsoft.Hosting.Lifetime": "Information"
+        }
+    }
+},
+"ApplicationInsights": {
+    "InstrumentationKey": "12345678-1234-5678-1234-1234567890ab"    
+}
