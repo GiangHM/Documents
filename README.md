@@ -45,5 +45,6 @@ This is what I already shared to my co-workers. Through these presentations I pr
 
 ### [TLSTerminationArch](https://github.com/GiangHM/Documents/tree/master/TLSTerminationArch)
 - Understanding about TLS termination architecture
-- How it works in Cloud Run and Azure Container App
-- How to be aware when developing an API using ASP.NET Core or Spring Boot Framework
+- How it works in `Cloud Run`, `Azure Container App`, `Azure App Service`
+- How to be aware when developing an API using ASP.NET Core and deploying to: `Cloud Run` or `Azure Container App` or `Azure App Service`
+- How to be aware when developing an API using ASP.NET Core Spring Boot Framework and deploying to: `Cloud Run` or `Azure Container App`
